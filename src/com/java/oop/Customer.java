@@ -17,6 +17,9 @@ public class Customer {
         this.age = age;
         this.address = address;
         this.phoneNumber = phoneNumber;
+
+        System.out.println("--------------------");
         System.out.println("Arg-constructor");
+
     }
 }
