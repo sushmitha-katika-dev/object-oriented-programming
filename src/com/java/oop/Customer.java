@@ -6,6 +6,8 @@ public class Customer {
     public int age;
     public String address;
     public String phoneNumber;
+    public String accountNumber;
+    public boolean isActive;
 
     public Customer(){
         System.out.println("No-Arg constructor with somevalues");
@@ -22,4 +24,34 @@ public class Customer {
         System.out.println("Arg-constructor");
 
     }
+
+    void printCustomerDetails(){
+        System.out.println("Customer Profile Display");
+        System.out.println("Customer Id: "+id);
+        System.out.println("Customer Name: "+name);
+        System.out.println("Customer Age: "+age);
+        System.out.println("Customer Address: "+address);
+        System.out.println("Customer Phone Number: "+phoneNumber);
+        System.out.println();
+
+    }
+
+    void updateCustomerAddress(String updateAddressTo){
+        address = updateAddressTo;
+        System.out.println("updated Customer Address to: "+updateAddressTo);
+        System.out.println();
+    }
+
+    boolean isCustomerActive(){
+        return isActive;
+    }
+
+    void accountDeactivate(String deactivateAccountNumber){
+        System.out.println("Account Deactivated..");
+   }
+
+    boolean validateContactDetails() {
+        return false;
+    }
+
 }

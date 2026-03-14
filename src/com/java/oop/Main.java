@@ -3,7 +3,7 @@ package com.java.oop;
 public class Main {
     public static void main(String[] args) {
 
-        //Customer1 object creation
+        /* //Customer1 object creation
         Customer customer = new Customer();
         customer.id = 1;
         customer.name = "sushmihta";
@@ -16,7 +16,9 @@ public class Main {
         System.out.println(customer.age);
         System.out.println(customer.address);
         System.out.println(customer.phoneNumber);
+        */
 
+      /*
         //Customer2 object creation
         Customer customer2 = new Customer(2,"krishna",25,"Mumbai","9849861479");
 
@@ -52,15 +54,28 @@ public class Main {
         System.out.println(customer5.age);
         System.out.println(customer5.address);
         System.out.println(customer5.phoneNumber);
+        */
 
-        //Customer6 object creation
-        Customer customer6 = new Customer(6,"shivasai",27,"warangal","6845874129");
+     //Customer6 object creation
+     Customer customer6 = new Customer(6, "shivasai", 27, "warangal", "6845874129");
 
-        System.out.println(customer6.id);
-        System.out.println(customer6.name);
-        System.out.println(customer6.age);
-        System.out.println(customer6.address);
-        System.out.println(customer6.phoneNumber);
+     //Customer Profile Display
+     customer6.printCustomerDetails();
+
+     //Update Customer Address
+     String updateAddressTo = "Karimnagar";
+     customer6.updateCustomerAddress(updateAddressTo);
+
+     //Check Customer Active Status
+     System.out.println("Customerr Active Status: "+customer6.isCustomerActive());
+
+     //Deactivate Customer Account
+     String deactiveAccountNumber = "124587";
+     customer6.accountDeactivate(deactiveAccountNumber);
+
+     //Validate Customer Contact Details
+     System.out.println("Contact details valid: "+customer6.validateContactDetails());
+
 
         //Order object
         Order order = new Order();
@@ -83,6 +98,25 @@ public class Main {
         order.orderTime = "2:30";
         order.deliveryPartnerName = "shiva";
 
+        System.out.println("============================");
+        // Calculate Total Order Amount
+        order.totalOrderAmount();
+
+        // Update order status
+        order.orderStatus = order.updateOrderStatus("CANCELLED");
+
+        // Check If Order Is Paid
+        order.isOrderPaid();
+
+        // Cancel an order
+        order.cancelOrder(order.orderStatus);
+
+        // Display order summary
+        order.displayOrderSummary();
+        System.out.println("============================");
+
+
+        /*
         System.out.println(order.id);
         System.out.println(order.restaurantName);
         System.out.println(order.customerName);
@@ -148,5 +182,46 @@ public class Main {
         System.out.println(order5.customerName);
         System.out.println(order5.foodItem);
         System.out.println(order5.grandTotal);
+*/
+        /*//Product class object creation
+        Product product = new Product();
+        product.id = 107;
+        product.name = "car";
+        product.maxRetailPrice = 230000L;
+        product.discountPercentage = 20;
+
+        // Display Product Details
+        product.displayProductDetails();
+
+        // Get Discount Amount
+        System.out.println("Discount Amount: "+product.getDiscountAmount());
+
+        //Update Stock
+        product.availableStock = 3;
+        product.quantitySold = 2;
+        product.updateStock(product.quantitySold);
+    */
+        Payment payment = new Payment();
+        payment.paymentId = 301201;
+        payment.amount = 350;
+        payment.paymentMethod = "Cash";
+        payment.paymentStatus = "Paid";
+        payment.transactionId = "xxxxx320";
+
+        //Initiate Payment
+        payment.initiatePayment(order, payment.paymentMethod);
+
+        // Validate Payment Amount
+        payment.validatePayment(order.grandTotal);
+
+        // Process Payment
+        payment.processPayment(payment.paymentMethod);
+
+        // Refund Payment
+        payment.refundPayment(order);
+
+        // Check Payment Status
+        String status = payment.checkPaymentStatus();
+
     }
 }

@@ -45,4 +45,37 @@ public class Order {
         System.out.println("----------------------------");
         System.out.println("Arg- constructor");
     }
+
+    void totalOrderAmount(){
+        System.out.println("Total order Amount: ");
+    }
+
+    String updateOrderStatus(String updateStatus){
+        return null;
+    }
+
+    boolean isOrderPaid(){
+        return false;
+    }
+
+    boolean cancelOrder(String orderStatus){
+        if (orderStatus != "Delivered"){
+            orderStatus = "Cancelled";
+            System.out.println("Order Cancelled..");
+            return true;
+        }
+        return false;
+    }
+    void displayOrderSummary() {
+        System.out.println("Order Summary");
+        System.out.println("-------------");
+        System.out.println("Order ID: " + id);
+        System.out.println("Customer: " + customerName);
+        System.out.println("Restaurant: " + restaurantName);
+        System.out.println("Food Item: " + foodItem);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Amount: " + grandTotal);
+        System.out.println("Status: " + orderStatus);
+    }
+
 }
