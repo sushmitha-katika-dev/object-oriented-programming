@@ -8,9 +8,12 @@ public class Customer {
     public String phoneNumber;
     public String accountNumber;
     public boolean isActive;
+    static String companyName = "Amazon";
+
+
 
     public Customer(){
-        System.out.println("No-Arg constructor with somevalues");
+        System.out.println("No-Arg constructor with some values");
     }
 
     public Customer(int id, String name, int age, String address, String phoneNumber) {
@@ -25,7 +28,7 @@ public class Customer {
 
     }
 
-    void printCustomerDetails(){
+    void displayCustomerDetails(){
         System.out.println("Customer Profile Display");
         System.out.println("Customer Id: "+id);
         System.out.println("Customer Name: "+name);

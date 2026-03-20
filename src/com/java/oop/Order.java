@@ -66,7 +66,7 @@ public class Order {
         }
         return false;
     }
-    void displayOrderSummary() {
+    void getOrder() {
         System.out.println("Order Summary");
         System.out.println("-------------");
         System.out.println("Order ID: " + id);
