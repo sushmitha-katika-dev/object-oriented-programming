@@ -38,15 +38,15 @@ public class Main {
         customer6.displayCustomerDetails();
 
         //Update Customer Address
-        String updateAddressTo = "Karimnagar";
-        customer6.updateCustomerAddress(updateAddressTo);
+        String newAddress = "Karimnagar";
+        boolean updated = customer6.updateCustomerAddress(newAddress);
+        System.out.println("Address updated: " + updated);
 
         //Check Customer Active Status
         System.out.println("Customerr Active Status: "+customer6.isCustomerActive());
 
         //Deactivate Customer Account
-        String deactiveAccountNumber = "124587";
-        customer6.accountDeactivate(deactiveAccountNumber);
+        customer6.deactivateAccount();
 
         //Validate Customer Contact Details
         System.out.println("Contact details valid: "+customer6.validateContactDetails());
@@ -71,22 +71,22 @@ public class Main {
         order.orderTime = "2:30";
         order.deliveryPartnerName = "shiva";
 
-        System.out.println("============================");
         // Calculate Total Order Amount
-        order.totalOrderAmount();
+        double total = order.calculateTotalAmount();
+        System.out.println("Total Amount: "+total);
 
         // Update order status
-        order.orderStatus = order.updateOrderStatus("CANCELLED");
+        order.updateOrderStatus("CANCELLED");
 
         // Check If Order Is Paid
         order.isOrderPaid();
 
         // Cancel an order
-        order.cancelOrder(order.orderStatus);
+        boolean cancelled = order.cancelOrder();
+        System.out.println("order Cancelled: "+cancelled);
 
         // Display order summary
-        order.getOrder();
-        System.out.println("============================");
+        order.displayOrderSummary();
 
 
         System.out.println(order.id);
@@ -112,18 +112,41 @@ public class Main {
         Order order2 = new Order(102,"Pizza Hut","Krishna","Mumbai",
                 "Burger",1,180,10,25,5,220,"UPI","Preparing","3:00 PM","Ravi");
 
+        System.out.println(order2.id);
+        System.out.println(order2.restaurantName);
+        System.out.println(order2.customerName);
+        System.out.println(order2.foodItem);
+        System.out.println(order2.grandTotal);
+
         //Order3 object creation
         Order order3 = new Order(103,"Dominos","Sai","Chennai",
                 "Pasta",2,200,11,30,6,447,"Card","Out for delivery","3:30 PM","Arjun");
+
+        System.out.println(order3.id);
+        System.out.println(order3.restaurantName);
+        System.out.println(order3.customerName);
+        System.out.println(order3.foodItem);
+        System.out.println(order3.grandTotal);
 
         //Order4 object creation
         Order order4 = new Order(104,"KFC","Shiva","Hyderabad",
                 "Fried Chicken",3,220,12,35,7,714,"Cash","Preparing","4:00 PM","Rahul");
 
+        System.out.println(order4.id);
+        System.out.println(order4.restaurantName);
+        System.out.println(order4.customerName);
+        System.out.println(order4.foodItem);
+        System.out.println(order4.grandTotal);
+
         //Order5 object creation
         Order order5 = new Order(105,"Burger King","Sai Ram","Kerala",
                 "Veg Burger",2,150,9,20,5,334,"UPI","Delivered","4:30 PM","Kiran");
 
+        System.out.println(order5.id);
+        System.out.println(order5.restaurantName);
+        System.out.println(order5.customerName);
+        System.out.println(order5.foodItem);
+        System.out.println(order5.grandTotal);
 
         //Product class object creation
         Product product = new Product();
@@ -139,9 +162,8 @@ public class Main {
         System.out.println("Discount Amount: "+product.getDiscountAmount());
 
         //Update Stock
-        product.availableStock = 3;
-        product.quantitySold = 2;
-        product.updateStock(product.quantitySold);
+        boolean stockUpdated = product.updateStock(2);
+        System.out.println("Stock update succes: "+stockUpdated);
 
 
         Payment payment = new Payment();
@@ -152,19 +174,24 @@ public class Main {
         payment.transactionId = "xxxxx320";
 
         //Initiate Payment
-        payment.initiatePayment(order, payment.paymentMethod);
+        boolean initiated = payment.initiatePayment(order, payment.paymentMethod);
+        System.out.println("Payment initiated: "+initiated);
 
         // Validate Payment Amount
-        payment.validatePayment(order.grandTotal);
+        boolean valid = payment.validatePayment(order.grandTotal);
+        System.out.println("Payment valid: "+valid);
 
         // Process Payment
-        payment.processPayment(payment.paymentMethod);
+        boolean processed = payment.processPayment(payment.paymentMethod);
+        System.out.println("Payment processed: "+processed);
 
         // Refund Payment
-        payment.refundPayment(order);
+        boolean refunded = payment.refundPayment(order);
+        System.out.println("Refund status: "+refunded);
 
         // Check Payment Status
         String status = payment.checkPaymentStatus();
+        System.out.println("Payment status: "+status);
 
     }
 }

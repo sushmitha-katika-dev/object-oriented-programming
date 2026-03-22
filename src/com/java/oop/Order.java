@@ -36,39 +36,42 @@ public class Order {
         this.gst = gst;
         this.deliveryFee = deliveryFee;
         this.platformFee = platformFee;
-        this.grandTotal = price * quantity + gst + deliveryFee + platformFee;
+        this.grandTotal = grandTotal;
         this.paymentMethod = paymentMethod;
         this.orderStatus = orderStatus;
         this.orderTime = orderTime;
         this.deliveryPartnerName = deliveryPartnerName;
 
-        System.out.println("----------------------------");
-        System.out.println("Arg- constructor");
+        System.out.println("===== Order Class =====");
     }
 
-    void totalOrderAmount(){
-        System.out.println("Total order Amount: ");
+    double calculateTotalAmount(){
+        this.grandTotal = (price * quantity) + gst + deliveryFee + platformFee;
+        return grandTotal;
     }
 
-    String updateOrderStatus(String updateStatus){
-        return null;
+    void updateOrderStatus(String status){
+        if(status != null && !status.isEmpty()){
+            this.orderStatus = status;
+            System.out.println("Order status updated to: "+status);
+        }
+
     }
 
     boolean isOrderPaid(){
-        return false;
+        return paymentMethod != null;
     }
 
-    boolean cancelOrder(String orderStatus){
-        if (orderStatus != "Delivered"){
-            orderStatus = "Cancelled";
+    boolean cancelOrder(){
+        if (orderStatus != null && !orderStatus.equalsIgnoreCase("Delivered")){
+            this.orderStatus = "Cancelled";
             System.out.println("Order Cancelled..");
             return true;
         }
         return false;
     }
-    void getOrder() {
-        System.out.println("Order Summary");
-        System.out.println("-------------");
+    void displayOrderSummary() {
+        System.out.println("------ *** Order Summary *** ------");
         System.out.println("Order ID: " + id);
         System.out.println("Customer: " + customerName);
         System.out.println("Restaurant: " + restaurantName);
@@ -76,6 +79,7 @@ public class Order {
         System.out.println("Quantity: " + quantity);
         System.out.println("Total Amount: " + grandTotal);
         System.out.println("Status: " + orderStatus);
+        System.out.println("-----------------------------------");
     }
 
 }

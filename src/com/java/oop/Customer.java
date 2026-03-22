@@ -22,39 +22,39 @@ public class Customer {
         this.age = age;
         this.address = address;
         this.phoneNumber = phoneNumber;
-
-        System.out.println("--------------------");
-        System.out.println("Arg-constructor");
-
+        System.out.println("Arg constructor with some values");
     }
 
     void displayCustomerDetails(){
-        System.out.println("Customer Profile Display");
+        System.out.println("======Customer Profile Display======");
         System.out.println("Customer Id: "+id);
         System.out.println("Customer Name: "+name);
         System.out.println("Customer Age: "+age);
         System.out.println("Customer Address: "+address);
         System.out.println("Customer Phone Number: "+phoneNumber);
-        System.out.println();
+        System.out.println("------------------------------------");
 
     }
 
-    void updateCustomerAddress(String updateAddressTo){
-        address = updateAddressTo;
-        System.out.println("updated Customer Address to: "+updateAddressTo);
-        System.out.println();
+    boolean updateCustomerAddress(String newAddress){
+        if(newAddress != null && !newAddress.isEmpty()){
+            this.address = newAddress;
+            return true;
+        }
+        return  false;
     }
 
     boolean isCustomerActive(){
         return isActive;
     }
 
-    void accountDeactivate(String deactivateAccountNumber){
-        System.out.println("Account Deactivated..");
+    void deactivateAccount(){
+        this.isActive = false;
+        System.out.println("Account deactivated successfully");
    }
 
     boolean validateContactDetails() {
-        return false;
+        return phoneNumber != null && phoneNumber.length() ==10;
     }
 
 }

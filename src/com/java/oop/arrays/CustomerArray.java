@@ -77,8 +77,5 @@ public class CustomerArray {
         }
     }
 
-    public static Customer[] sortCustomerByName(Customer[] customers){
-
-    }
 
 }
