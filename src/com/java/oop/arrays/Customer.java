@@ -17,7 +17,7 @@ public class Customer {
         this.gender = gender;
     }
 
-    void getCustomers(){
+    public void getCustomers(){
         System.out.println("----------Customer Profile Display----------");
         System.out.println("Customer Id: "+id);
         System.out.println("Customer Name: "+name);
@@ -25,7 +25,6 @@ public class Customer {
         System.out.println("Customer Phone Number: "+phoneNumber);
         System.out.println("Customer Age: "+age);
         System.out.println("Customer Gender: "+gender);
-        System.out.println();
 
     }
 }
