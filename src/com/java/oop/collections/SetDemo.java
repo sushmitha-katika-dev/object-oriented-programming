@@ -22,5 +22,4 @@ public class SetDemo {
         System.out.println(set.isEmpty());
         System.out.println(set.size());
     }
-
 }
