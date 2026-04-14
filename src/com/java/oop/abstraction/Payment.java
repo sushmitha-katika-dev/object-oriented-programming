@@ -2,9 +2,6 @@ package com.java.oop.abstraction;
 
 public abstract class Payment {
 
-    // abstract class cant be instantiated(cant create object)
-    // can have constructor
-
     String id;
     String customerName;
     String paymentDate;
@@ -16,13 +13,6 @@ public abstract class Payment {
         this.paymentDate = paymentDate;
         this.mode = mode;
     }
-    /*
-    //  how the payment is done is not needed, payment is done or not done is required
-
-    public boolean pay(double amount){
-        System.out.println("Payment done using cash: "+ amount);
-        return true;
-    }*/
 
     public abstract boolean pay(double amount);
 
@@ -40,3 +30,13 @@ public abstract class Payment {
         System.out.println("-------------------");
     }
 }
+
+// abstract class cant be instantiated(cant create object)
+// can have constructor
+/*
+    //  how the payment is done is not needed, payment is done or not done is required
+
+    public boolean pay(double amount){
+        System.out.println("Payment done using cash: "+ amount);
+        return true;
+    }*/

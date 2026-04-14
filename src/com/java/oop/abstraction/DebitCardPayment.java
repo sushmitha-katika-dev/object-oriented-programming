@@ -9,7 +9,7 @@ public class DebitCardPayment extends Payment {
     @Override
     public boolean pay(double amount){
         super.paymentDetails();
-       System.out.println("Payment successful using debit card");
+       System.out.println("Payment successful using debit card" + amount);
        return true;
     }
 }

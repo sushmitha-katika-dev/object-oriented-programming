@@ -9,7 +9,7 @@ public class CashOnDeliveryPayment extends Payment{
     @Override
     public boolean pay(double amount) {
         super.paymentDetails();
-        System.out.println("Payment successful using cash on delivery");
+        System.out.println("Payment successful using cash on delivery" + amount);
         return true;
     }
 }

@@ -8,7 +8,7 @@ public class UpiPayment extends Payment{
     @Override
     public boolean pay(double amount) {
         super.paymentDetails();
-        System.out.println("Payment successful using UPI ");
+        System.out.println("Payment successful using UPI " + amount);
         return true;
     }
 }
