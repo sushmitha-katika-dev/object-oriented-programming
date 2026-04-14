@@ -3,6 +3,7 @@ package com.java.oop.interfaces;
 public class DebitCardPayment implements Payment{
     @Override
     public boolean pay(double amount) {
+        Payment.validTranscation(4,amount);
         System.out.println("Payment successful using debit card: " + amount);
         return true;
     }

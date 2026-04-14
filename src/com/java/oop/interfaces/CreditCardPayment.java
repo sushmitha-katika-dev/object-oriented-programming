@@ -3,6 +3,7 @@ package com.java.oop.interfaces;
 public class CreditCardPayment implements Payment{
     @Override
     public boolean pay(double amount) {
+        Payment.validTranscation(4,amount);
         System.out.println("Payment successful using credit card amount: "+ amount);
         return true;
     }
