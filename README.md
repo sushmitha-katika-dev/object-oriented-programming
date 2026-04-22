@@ -17,6 +17,12 @@ This project focuses on strengthening Java fundamentals by applying **OOP, Colle
 - ArrayList, LinkedList, HashSet, LinkedHashSet, TreeSet, HashMap
 - Iterators for safe traversal
 
+### 🔧 Functional Programming
+- Functional interfaces
+- Lambda expressions
+- Method references
+- Writing concise and readable code using functional style
+
 ### ⚡ Streams
 - Filtering, mapping, sorting, grouping
 - Functional-style data processing
