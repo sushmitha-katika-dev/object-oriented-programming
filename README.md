@@ -28,16 +28,16 @@ This project focuses on strengthening Java fundamentals by applying **OOP, Colle
 - Reading and processing real data using BufferedReader
 
 ---
-
 ## 📂 Project Structure
-`
+
+```
 com.java.oop
-├── collection → List, Set, Map demos
-├── streams → Stream operations & CSV reader
-├── model → Java Bean classes
-├── comparator → Custom comparators
-├── functional → Functional interfaces
-`
+├── collection   → List, Set, Map demos
+├── streams      → Stream operations & CSV reader
+├── model        → Java Bean classes
+├── comparator   → Custom comparators
+├── functional   → Functional interfaces
+```
 
 ---
 
