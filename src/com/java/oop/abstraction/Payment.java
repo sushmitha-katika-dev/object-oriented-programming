@@ -13,6 +13,19 @@ public abstract class Payment {
         this.paymentDate = paymentDate;
         this.mode = mode;
     }
+    /*
+    🛒 E-commerce (Amazon-like) System
+👉 Models an online shopping system with cart, discount, and payment flow.
+
+Features:
+
+Product hierarchy (Electronics, Clothing)
+Cart system with multiple products
+Discount strategies (Festival, Premium)
+Payment integration (UPI, Card)
+OrderService to manage checkout process Final Project: Mini Amazon System (Products + Orders + Payments)
+👉 This will make you placement ready 💯
+     */
 
     public abstract boolean pay(double amount);
 
@@ -31,7 +44,7 @@ public abstract class Payment {
     }
 }
 
-// abstract class cant be instantiated(cant create object)
+// abstract class cant be instantiated(can't create object)
 // can have constructor
 /*
     //  how the payment is done is not needed, payment is done or not done is required
