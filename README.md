@@ -15,34 +15,24 @@ This project focuses on strengthening Java fundamentals by applying **Object-Ori
 ### 📦 OOP Design
 - Java Bean classes: `Customer`, `Product`
 - Encapsulation using getters/setters
-- Method chaining for cleaner object creation
+- Method chaining for clean and readable object creation
 - Proper `toString()`, `equals()`, and `hashCode()` usage
-
----
 
 ### 📊 Collections
 - List, Set, Map implementations
 - ArrayList, LinkedList, HashSet, LinkedHashSet, TreeSet, HashMap
 - Iterators for safe traversal and modification
 
----
-
 ### ⚡ Streams
 - Filtering, mapping, sorting, grouping
 - Functional-style data processing
 
----
-
 ### 🔁 Comparators
 - Custom sorting logic (by id, email, etc.)
-
----
 
 ### 📄 CSV Processing
 - Reading and processing real data using `BufferedReader`
 - Converting CSV data into Java objects
-
----
 
 ### 🔧 Functional Programming
 - Functional interfaces
@@ -52,6 +42,16 @@ This project focuses on strengthening Java fundamentals by applying **Object-Ori
 ---
 
 ## 📂 Project Structure
+src/com/java/oop
+│
+├── collection → List, Set, Map demos
+├── streams → Stream operations & CSV reader
+├── model → Java Bean classes
+├── comparator → Custom comparators
+├── functional → Functional interfaces
+├── abstraction → Payment abstraction examples
+├── interfaces → Interface implementations
+
 
 ---
 
