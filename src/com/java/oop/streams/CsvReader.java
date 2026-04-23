@@ -41,32 +41,13 @@ public class CsvReader {
     }
 
     public List<Customer> getCustomersFromCsv() throws IOException {
-
-        //CSV file path
-        File file = new File("C:/java-workspace/object-oriented-programming/customer.csv");
-
-        List<Customer> customerList = new ArrayList<>();
-
+        File file = new File("C:/java-workspace/object-oriented-programming/customers.csv");
         BufferedReader br = new BufferedReader(new FileReader(file));
-        br.readLine();//skip header
+        /*br.readLine();
 
-        String customerData = br.readLine();
-        while (customerData != null){
-            String[] data = customerData.split(",");
-
-            Customer customer = new Customer();
-            customer.setId(Integer.parseInt(data[0]));
-            customer.setName(data[1]);
-            customer.setAge(Integer.parseInt(data[2]));
-            customer.setGender(data[3]);
-            customer.setEmail(data[4]);
-            customer.setPassword(data[5]);
-            customer.setPhoneNumber(data[6]);
-            customer.setCity(data[7]);
-
-            customerList.add(customer);
-            customerData = br.readLine();
-        }
-        return customerList;
+        while(br.readLine() != null){
+            System.out.println(br.readLine());
+        }*/
+        return null;
     }
 }
