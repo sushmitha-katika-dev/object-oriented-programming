@@ -29,5 +29,10 @@ public class Main {
         System.out.println("----------All Products With price greater than given value-----------");
         productService.getAllProductsNames()
                 .forEach(System.out::println);
+        System.out.println("\nCount available products : " + productService.countOfProducts(true));
+        System.out.println("Is any Apple company products available : " + productService.isProductFromCompany("Apple"));
+        System.out.println("Are all products available? : " + productService.areAllProductsAvailable());
+        productService.firstProduct()
+                .ifPresentOrElse(product -> System.out.println("First product: \n" + product ), () -> System.out.println("No product exists"));
     }
 }
