@@ -31,6 +31,7 @@ public class Main {
         printHeader("Products With price greater than 23,000");
         productService.getProductsByPriceGreaterThan(23000)
                         .forEach(System.out::println);
+        printHeader("Products Names");
         productService.getAllProductsNames()
                 .forEach(System.out::println);
         System.out.println("\nCount available products : " + productService.countOfProducts(true));
@@ -83,7 +84,6 @@ public class Main {
                 .forEach((company,productList) -> {
                     System.out.println("Company: " + company);
                     productList.forEach(System.out::println);
-                    System.out.println();
                 });
         printHeader("Partition By Availability");
         productService.partitionProductsByAvailability()
