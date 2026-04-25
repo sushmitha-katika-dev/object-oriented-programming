@@ -28,7 +28,9 @@ public class Main {
         printHeader("Products of Category");
         productService.getProductsOfCategory("Clothing")
                 .forEach(System.out::println);
-        System.out.println("Products With price greater than given value-----------");
+        printHeader("Products With price greater than 23,000");
+        productService.getProductsByPriceGreaterThan(23000)
+                        .forEach(System.out::println);
         productService.getAllProductsNames()
                 .forEach(System.out::println);
         System.out.println("\nCount available products : " + productService.countOfProducts(true));
