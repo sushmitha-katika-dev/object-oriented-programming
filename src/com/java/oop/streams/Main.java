@@ -36,6 +36,7 @@ public class Main {
         System.out.println("Are all products available? : " + productService.areAllProductsAvailable());
         productService.firstProduct()
                 .ifPresentOrElse(product -> System.out.println("First product: \n" + product ), () -> System.out.println("No product exists"));
+<<<<<<< HEAD
 
         printHeader("Unique Categories");
         productService.getUniqueCategories()
@@ -120,5 +121,7 @@ public class Main {
 
     private static void printHeader(String title) {
         System.out.println("\n==== " + title + " ====");
+=======
+>>>>>>> origin/main
     }
 }

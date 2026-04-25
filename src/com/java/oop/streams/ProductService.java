@@ -5,9 +5,13 @@ import com.java.oop.model.Product;
 import java.io.*;
 import java.util.Comparator;
 import java.util.List;
+<<<<<<< HEAD
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+=======
+import java.util.Optional;
+>>>>>>> origin/main
 
 public class ProductService {
     CsvReader csvReader = new CsvReader();
@@ -73,6 +77,7 @@ public class ProductService {
                 .stream()
                 .findFirst();
     }
+<<<<<<< HEAD
     //9. Get all unique categories.
     public List<String> getUniqueCategories() throws IOException {
         return csvReader.getProductsFromCsv()
@@ -211,5 +216,7 @@ public class ProductService {
                         )
                 ));
     }
+=======
+>>>>>>> origin/main
 
 }
