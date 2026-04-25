@@ -10,8 +10,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import java.util.Optional;
-
 
 public class ProductService {
     CsvReader csvReader = new CsvReader();
@@ -25,7 +23,6 @@ public class ProductService {
 
         return getProducts;
     }
-
     //2. Get all products belonging to a given category.
     public List<Product> getProductsOfCategory(String category) throws IOException {
         List<Product> getProducts = csvReader.getProductsFromCsv()
@@ -34,7 +31,6 @@ public class ProductService {
                 .toList();
         return getProducts;
     }
-
     //3. Get all products with price greater than a given value.
     public List<Product> getProductsByPriceGreaterThan(int price) throws IOException {
         List<Product> getProducts = csvReader.getProductsFromCsv()
@@ -77,7 +73,6 @@ public class ProductService {
                 .stream()
                 .findFirst();
     }
-
     //9. Get all unique categories.
     public List<String> getUniqueCategories() throws IOException {
         return csvReader.getProductsFromCsv()
@@ -133,8 +128,7 @@ public class ProductService {
                 .filter(product -> product.getManufacturedYear() > year)
                 .toList();
     }
-    //16. Get all products that are:
-    //- available and price greater than a given value
+    //16. Get all products that are  available and price greater than a given value
 
     public List<Product> getAvailableProductsAbovePrice(double price) throws IOException {
         return csvReader.getProductsFromCsv()
@@ -162,8 +156,7 @@ public class ProductService {
                 .stream()
                 .collect(Collectors.groupingBy(Product::getCompany));
     }
-    //20. Partition products into:
-    //available & unavailable
+    //20. Partition products into : available & unavailable
     public Map<Boolean, List<Product>> partitionProductsByAvailability() throws IOException {
         return csvReader.getProductsFromCsv()
                 .stream()
